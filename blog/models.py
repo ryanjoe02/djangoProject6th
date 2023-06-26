@@ -11,8 +11,8 @@ class Post(models.Model):
 
     class Meta:
         verbose_name = 'post'
-        verbose_name_phural = 'posts'
-        dt_table = 'blog_posts'
+        verbose_name_plural = 'posts'
+        db_table = 'blog_posts'
         ordering = ('-modify_dt',)
 
     def __str__(self):
