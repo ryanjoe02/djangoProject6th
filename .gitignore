@@ -1,5 +1,5 @@
-list/**
-.idea/**
+list/
+.idea/
 *.log
 *.pot
 *.pyc
