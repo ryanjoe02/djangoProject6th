@@ -10,7 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
     def get_queryset(self, request):
-        return super().get_queryset(request).refetch_related('tags')
+        return super().get_queryset(request).prefetch_related('tags')
 
     def tag_list(self, obj):
         return ','.join(o.name for o in obj.tags.all())

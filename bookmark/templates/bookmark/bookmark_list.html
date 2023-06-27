@@ -3,14 +3,9 @@
 {% block title %}bookmark_list.html{% endblock title %}
 
 {% block content %}
-    <div id="ccontent">
-    <h1>Bookmark List</h1>
+    <h1>{{ object.title }}</h1>
+
     <ul>
-        {% for bookmark in object_list %}
-            <li>
-                <a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a>
-            </li>
-        {% endfor %}
+        <li><a href="{{ object.url }}">{{ object.url }}</a></li>
     </ul>
-    </div>
 {% endblock content %}
