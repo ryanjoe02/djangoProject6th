@@ -51,9 +51,6 @@
     {% block content %}{% endblock content %}
 </div>
 
-<footer class="fixed-bottom bg-info">
-    <h4>This is FOOTER area</h4>
-</footer>
 {% block footer %}{% endblock footer %}
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -67,5 +64,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+{% block extra-script %}{% endblock %}
 </body>
 </html>
