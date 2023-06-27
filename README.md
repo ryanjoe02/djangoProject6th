@@ -4,7 +4,12 @@
 
 ### Chapter 7.3
 
-- disque view coding
-- 
+- [disque](https://disqus.com/) view coding
+
+- update all files what I've learned today
+
+## 06/28
+
+### Chapter 
 
 
