@@ -31,21 +31,23 @@
             </li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">
-                    Dropdown
+                    Utils
                 </a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Action</a>
+                    <a href="{% url 'admin:index' %}" class="dropdown-item" target="blank">Admin</a>
                     <a href="#" class="dropdown-item">Another Action</a>
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">Something else here</a>
+                    <a href="{% url 'blog:post_archive' %}" class="dropdown-item">Archive</a>
+                    <a href="{% url 'blog:search' %}" class="dropdown-item">Search</a>
                 </div>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link disabled" tabindex="-1">Disabled</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input type="search" class="form-control mr-sm-2" placeholder="Search">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'blog:search' %}" method="post">
+            {% csrf_token %}
+            <input type="search" class="form-control mr-sm-2" name="search_word" placeholder="Search">
             <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
         </form>
     </div>
