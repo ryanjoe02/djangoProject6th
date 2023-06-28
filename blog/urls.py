@@ -1,6 +1,5 @@
-from django.urls import path, re_path
-
 from blog import views
+from django.urls import path, re_path
 
 app_name = 'blog'
 urlpatterns = [
@@ -16,4 +15,6 @@ urlpatterns = [
 
     path('tag/', views.TagCloudTV.as_view(), name='tag_cloud'),
     path('tag/<str:tag>/', views.TaggedObjectLV.as_view(), name='tagged_object_list'),
+
+    path('search/', views.SearchFormView.as_view(), name='search'),
 ]
