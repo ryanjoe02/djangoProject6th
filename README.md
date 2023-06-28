@@ -10,6 +10,10 @@
 
 ## 06/28
 
-### Chapter 
+### Chapter 9.2.5
+
+- Photo app update
+
+-
 
 

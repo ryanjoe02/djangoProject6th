@@ -3,9 +3,8 @@
 {% block title %}bookmark_detail.html{% endblock title %}
 
 {% block content %}
-        <h1>
-            {{ object.title }}
-        </h1>
+        <h1>{{ object.title }}</h1>
+
         <ul>
             <li>URL: <a href="{{ object.url }}" target="blank">{{ object.url }}</a></li>
         </ul>

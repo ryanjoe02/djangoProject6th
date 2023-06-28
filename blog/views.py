@@ -72,6 +72,7 @@ class TaggedObjectLV(ListView):
         context['tagname'] = self.kwargs['tag']
         return context
 
+
 class SearchFormView(FormView):
     form_class = PostSearchForm
     template_name = 'blog/post_search.html'
