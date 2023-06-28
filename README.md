@@ -1,4 +1,4 @@
-# 파이썬 웹 프로그래밍 
+# Python Web Programming
 
 ## 06/27
 
@@ -14,6 +14,10 @@
 
 - Photo app update
 
--
+## 06/29
+
+### Chapter 10
+
+- 
 
 
