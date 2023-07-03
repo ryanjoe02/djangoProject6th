@@ -23,7 +23,10 @@
 - page of login/logout & change password
 
 
-## 06/30
+## 07/03
+
+- update password & change password sites
+
 
 
 
