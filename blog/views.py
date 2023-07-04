@@ -96,12 +96,13 @@ class SearchFormView(FormView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'slug', 'description', 'content', 'tags']
-    initial = ['slug', 'auto-filling-do-not-input']
+    initial = {'slug': 'auto-filling-do-not-input'}
     success_url = reverse_lazy('blog:index')
 
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
+
 
 class PostChangeLV(LoginRequiredMixin, ListView):
     template_name = 'blog/post_change_list.html'
@@ -109,10 +110,12 @@ class PostChangeLV(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Post.objects.filter(owner=self.request.user)
 
+
 class PostUpdateView(OwnerOnlyMixin, UpdateView):
     model = Post
     fields = ['title', 'slug', 'description', 'content', 'tags']
     success_url = reverse_lazy('blog:index')
+
 
 class PostDeleteView(OwnerOnlyMixin, DeleteView):
     model = Post
