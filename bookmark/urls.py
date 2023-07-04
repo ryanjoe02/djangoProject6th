@@ -10,6 +10,6 @@ urlpatterns = [
     path('add/', views.BookmarkCreateView.as_view(), name='add'),
     path('chage/', views.BookmarkChangeLV.as_view(), name='change'),
     path('<int:pk>/update/', views.BookmarkUpdateView.as_view(), name='update'),
-    path('<int:pk>/delete', views.BookmarkDeleteView.as_view(), name='delete'),
+    path('<int:pk>/delete/', views.BookmarkDeleteView.as_view(), name='delete'),
 
 ]
